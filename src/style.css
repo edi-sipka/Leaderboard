@@ -29,9 +29,12 @@
 .scores {
   margin-top: 1rem;
   list-style: none;
+  width: 50%;
   border: 2px solid #000;
 }
-
+.display {
+  width: 50%;
+}
 .users {
   padding: 1rem;
 }
