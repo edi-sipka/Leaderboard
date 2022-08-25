@@ -3,7 +3,7 @@ const list = document.querySelector('.scores');
 // Display API data
 export const display = async () => {
   await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1WjHZNMPhymXrSt0JsIP/scores/'
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1WjHZNMPhymXrSt0JsIP/scores/',
   )
     .then((response) => response.json())
     .then((json) => {
@@ -37,7 +37,7 @@ export const addList = async () => {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      }
+      },
     ).then((response) => response.json());
 
     display();
@@ -46,7 +46,7 @@ export const addList = async () => {
   }
 };
 
-//Refresh data
+// Refresh data
 export const refresh = () => {
   list.innerHTML = '';
   display();
