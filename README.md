@@ -12,6 +12,8 @@
 
 ## Live Demo
 
+- Live: [Check it here](https://edi-sipka.github.io/Leaderboard/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
