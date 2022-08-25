@@ -1,7 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:400,600,500,700);
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background: url('./Images/background.jpg') no-repeat center fixed;
+  background-size: cover;
+  color: #fff;
 }
 
 .main {
@@ -9,15 +18,25 @@
   width: 80%;
 }
 
+.heading {
+  margin-top: 2rem;
+  font-family: 'Advent Pro', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(0 0 0 / 10%), 0 0 15px #fff;
+}
+
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5%;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
-.heading {
-  margin-top: 2rem;
+.display {
+  width: 50%;
 }
 
 .score {
@@ -26,29 +45,101 @@
   align-items: center;
 }
 
-.scores {
-  margin-top: 1rem;
-  list-style: none;
-  width: 50%;
-  border: 2px solid #000;
+.para {
+  font-family: 'Advent Pro', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 2rem;
+  color: rgb(214 245 255);
+  text-shadow: 1px 1px rgb(0 0 0 / 10%), 0 0 15px #fff;
 }
 
-.display {
-  width: 50%;
+.btn {
+  border-radius: 25px;
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  color: #fff;
+  background: linear-gradient(45deg, #5644b6 50%, #4739a9 50%);
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.46, 0.03, 0.22, 0.96);
+  cursor: pointer;
+  font-size: 1rem;
+  text-shadow: 1px 1px rgb(0 0 0 / 10%), 0 0 15px #fff;
+  font-family: 'Advent Pro', sans-serif;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #705cdf 50%, #3a2c96 50%);
+  box-shadow: 10px 10px 5px #aaa;
+}
+
+.scores {
+  margin-top: 2rem;
+  font-family: 'Advent Pro', sans-serif;
+  list-style: none;
+  border: 2px solid #000;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(32, 81, 241, 0.753) 50%,
+      rgba(66, 132, 255, 0.726) 50%
+    );
+  cursor: pointer;
+  font-weight: 100;
+  transition: all 0.2s cubic-bezier(0.46, 0.03, 0.22, 0.96);
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px rgb(0 0 0 / 10%), 0 0 15px #fff;
+}
+
+.scoring {
+  font-family: 'Advent Pro', sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 2rem;
+  color: rgb(214 245 255);
+  text-shadow: 1px 1px rgb(0 0 0 / 10%), 0 0 15px #fff;
+}
+
+li:nth-child(even) {
+  background:
+    linear-gradient(
+      45deg,
+      rgba(0, 15, 66, 0.753) 50%,
+      rgba(32, 66, 129, 0.726) 50%
+    );
 }
 
 .users {
   padding: 1rem;
 }
 
-.users2 {
-  background-color: rgb(194, 194, 194);
-}
-
 .form-add {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+}
+
+input {
+  font-family: 'Advent Pro', sans-serif;
+  background:
+    linear-gradient(
+      45deg,
+      rgba(32, 81, 241, 0.753) 50%,
+      rgba(66, 132, 255, 0.726) 50%
+    );
+  cursor: pointer;
+  font-weight: 100;
+  text-transform: uppercase;
+  transition: all 0.2s cubic-bezier(0.46, 0.03, 0.22, 0.96);
+  text-align: center;
+  color: #fff;
+}
+
+input::placeholder {
+  color: rgb(214 245 255);
+  font-family: 'Advent Pro', sans-serif;
 }
 
 .form-add input {
@@ -59,20 +150,4 @@
   margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 600;
-}
-
-.btn {
-  width: 5rem;
-  background: rgb(119, 119, 119);
-  font-weight: bold;
-  color: white;
-  border: 0 none;
-  border-radius: 1px;
-  cursor: pointer;
-  padding: 10px 5px;
-  margin: 10px 5px;
-}
-
-.btn:hover {
-  background: rgb(194, 194, 194);
 }

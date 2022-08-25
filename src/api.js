@@ -1,8 +1,9 @@
 const list = document.querySelector('.scores');
 
+// Display API data
 export const display = async () => {
   await fetch(
-    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1WjHZNMPhymXrSt0JsIP/scores/',
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1WjHZNMPhymXrSt0JsIP/scores/'
   )
     .then((response) => response.json())
     .then((json) => {
@@ -11,11 +12,13 @@ export const display = async () => {
         const item = document.createElement('li');
         item.classList.add('users');
         item.textContent = `${json.result[i].user} : ${json.result[i].score}`;
+
         list.appendChild(item);
       }
     });
 };
 
+// Add new data
 export const addList = async () => {
   const user = document.getElementById('user').value;
   const score = document.getElementById('score').value;
@@ -34,7 +37,7 @@ export const addList = async () => {
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
-      },
+      }
     ).then((response) => response.json());
 
     display();
@@ -43,6 +46,7 @@ export const addList = async () => {
   }
 };
 
+//Refresh data
 export const refresh = () => {
   list.innerHTML = '';
   display();

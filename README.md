@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 - Run `npm install` to install all the dependencies
 - Run `npm start` to fire a development server
 
-## Authors
+## Author
 
 👤 **Edi Sipka**
 
