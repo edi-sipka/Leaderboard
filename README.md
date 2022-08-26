@@ -1,4 +1,4 @@
-# leaderboard
+#Leaderboard
 
 > A simple project to add scores using API.
 
@@ -9,6 +9,11 @@
 - Javascript
 - Webpack
   -Gitflow
+
+
+### Preview
+
+![Website preview](./src/Images/mockup.png)
 
 ## Live Demo
 
